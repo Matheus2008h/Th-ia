@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: th-ia-backend
+    runtime: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm run start
+    rootDir: backend
