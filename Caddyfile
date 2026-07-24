@@ -1,0 +1,11 @@
+# Configuração do Caddy — proxy reverso com HTTPS automático (Let's Encrypt).
+# Troque "seudominio.com" pelo seu domínio de verdade nas duas linhas abaixo.
+# O Caddy cuida sozinho do certificado SSL, renovação, tudo — não precisa mexer em mais nada.
+
+seudominio.com {
+    reverse_proxy frontend:3000
+}
+
+api.seudominio.com {
+    reverse_proxy backend:4000
+}
